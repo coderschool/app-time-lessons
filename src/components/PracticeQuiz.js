@@ -192,6 +192,9 @@ export default class Quiz extends React.Component {
 						{!complete && <h1 className='questionTitle'>
 							{this.renderMarkup(currentQuestion.get('title'))}
 						</h1>}
+						{!complete && <h2 className='questionSubtitle'>
+							{this.renderMarkup(currentQuestion.get('subtitle'))}
+						</h2>}
 
 						{!complete && currentQuestion.get('choices').map((choice, idx) => {
 							const key = (choice + idx);
@@ -252,7 +255,7 @@ export default class Quiz extends React.Component {
 							{answer
 								? <h1 className='correctAnswer'>Correct, great work!</h1>
 								: <h1 className='wrongAnswer'>Sorry, that is not correct!</h1>}
-							{answer !== null && !answer && explanation && (
+							{explanation && (
 								<div className='explanation'>
 									<h3>Explanation:</h3>
 									<p>{this.renderMarkup(explanation)}</p>

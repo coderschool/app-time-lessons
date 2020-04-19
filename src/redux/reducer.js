@@ -46,7 +46,7 @@ export default (state = defaultState, action) => {
 
   case START_QUIZ: {
     const quizzes = state.get('quizzes');
-    const quiz = shuffleQuiz(findQuiz(payload, quizzes));
+    const quiz = findQuiz(payload, quizzes);
     return state
       .set('active', true)
       .set('quiz', quiz)
