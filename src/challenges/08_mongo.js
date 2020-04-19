@@ -9,7 +9,7 @@ const end = `</code></pre>`;
 *********************************** */
 
 export default {
-	title: "Week 8.1 Quiz",
+	title: "Week 8_1 Quiz",
 	category: "Basic Mongo DB Syntax",
 	challenges: [
 		{
